@@ -1,13 +1,18 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Livewire\Counter;
 use App\Livewire\Contact;
+use App\Livewire\Counter;
 use App\Livewire\Dashboard;
+use App\Livewire\ToastNotification;
+use Illuminate\Support\Facades\Route;
+
+
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('notification', ToastNotification::class);
 
 Auth::routes();
 

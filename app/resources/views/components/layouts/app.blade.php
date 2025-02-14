@@ -12,9 +12,20 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 
+
+
     <!-- // Livewire styles -->
     @livewireStyles
     @stack('styles')
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{{ asset('/plugins/toastr/toastr.min.css') }}">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="{{ asset('/plugins/sweetalert2/sweetalert2.min.css') }}">
+    <script src="{{ asset('/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 
 </head>
     <body class="hold-transition sidebar-mini layout-fixed">
@@ -34,21 +45,21 @@
 
         </div>
 
-        <!-- ./wrapper -->
-        <!-- jQuery -->
+
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-        <!-- jQuery UI 1.11.4 -->
         <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-
         <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
-        <!-- Bootstrap 4 -->
-        <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-        <!-- AdminLTE App -->
+        <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-        <!-- // Livewire scripts -->
+        <script src="{{ asset('/plugins/toastr/toastr.min.js') }}"></script>
+
+
         @livewireScripts
         @stack('scripts')
+
+        <script src="{{ asset('js/toast.js') }}"></script>
+        <script src="{{ asset('js/sweetalert.js') }}"></script>
 
     </body>
 </html>

@@ -19,6 +19,8 @@
     <section class="content">
         <div class="container-fluid">
             <livewire:counter />
+            <livewire:toast-notification />
+
         </div>
     </div>
 </div>

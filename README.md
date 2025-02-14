@@ -1,15 +1,21 @@
 ## Installation
 
-# Run bash terminal
-
-```
-docker-compose run app bash
-```
-
 # Build image
 
 ```
 docker-compose up -d app
+```
+
+# run project
+
+```
+docker-compose down && docker-compose up -d
+```
+
+# Run bash terminal
+
+```
+docker-compose run app bash
 ```
 
 # add config file .env
@@ -35,12 +41,6 @@ docker-compose exec app php artisan migrate:refresh --seed
 
 ```
 docker-compose exec app php artisan key:generate
-```
-
-# run project
-
-```
-docker-compose down && docker-compose up -d
 ```
 
 #######################################
@@ -69,4 +69,14 @@ docker rmi $(docker images -q)
 
 ```
 docker-compose up --build
+```
+
+# fix error "Please provide a valid cache path"
+
+```
+chmod -R 775 bootstrap
+cd storage/
+mkdir -p framework/{sessions,views,cache}
+chmod -R 775 framework
+
 ```

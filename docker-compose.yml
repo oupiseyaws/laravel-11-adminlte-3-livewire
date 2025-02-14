@@ -3,7 +3,7 @@ services:
     build:
       context: ./app
       dockerfile: ../docker/php/Dockerfile
-    container_name: laravel_11_livewire_adminlte_docker_app_new
+    container_name: laravel_11_livewire_adminlte_3_docker_app
     working_dir: /var/www
     volumes:
       - ./app:/var/www
@@ -13,7 +13,7 @@ services:
 
   webserver:
     image: nginx:latest
-    container_name: nginx_laravel_livewire_adminlte_docker_new
+    container_name: nginx_laravel_11_livewire_adminlte_3_docker_app
     restart: unless-stopped
     ports:
       - "8001:80"
@@ -27,7 +27,7 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: mysql_laravel_livewire_adminlte_docker_new
+    container_name: mysql_laravel_11_livewire_adminlte_3_docker_app
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root_password
@@ -43,7 +43,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin:latest
-    container_name: phpmyadmin_laravel_livewire_adminlte_docker_new
+    container_name: phpmyadmin_laravel_11_livewire_adminlte_3_docker_app
     restart: unless-stopped
     environment:
       PMA_HOST: db
